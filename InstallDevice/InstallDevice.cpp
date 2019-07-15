@@ -13,9 +13,17 @@ using namespace std::string_literals;
 
 
 
-static const wchar_t* INF_FILE           = L"C:\\Users\\h\\Desktop\\usbip-win\\Debug\\x64\\usbip_vhci.inf";
-static const wchar_t* DEVICE_NAME        = L"ROOT\\UNKNOWN\\00000";
-static const wchar_t* HWID               = L"root\\usbip_vhci";
+// Absolute path to inf file
+static const wchar_t* INF_FILE = L"<absolute_path_to_inf_file>";
+
+// Device name - take from DeviceManmager from after manual install
+static const wchar_t* DEVICE_NAME = L"ROOT\\UNKNOWN\\0000";
+
+// HWID - driver is assigned by driverid
+static const wchar_t* HWID = L"root\\usbip_vhci";
+
+// Description which we can see in Device Manager
+// Description is overriden by driver (dyuring driver installation)
 static const wchar_t* DEVICE_DESCRIPTION = L"USB/IP VHCI Test";
 
 #define BUFFER_LENGTH 256
